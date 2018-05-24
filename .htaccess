@@ -1,0 +1,4 @@
+
+#RewriteEngine On
+
+#RewriteRule ^movie/([0-9]+)$ index.php?id=$1
