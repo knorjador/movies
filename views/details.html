@@ -1,0 +1,48 @@
+
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x small-up-1 medium-up-2">
+
+      <h4 class="ahome"><a href="index.php">Accueil</a></h4>
+
+      <div class="media-object stack-for-small">
+        <div class="media-object-section">
+          <div class="thumbnail">
+            <img width="300px" src= "{{ data[0].movie.poster }}">
+          </div>
+        </div>
+        <div class="media-object-section">
+          <h4>{{ data[0].movie.title }} <small>{{ data[0].movie.year }}</small></h4>
+          <p>
+            {% for genre in data[3].genres %}
+              <span>{{ genre.name }}</span>
+              {% if not loop.last %} & {% endif %}
+            {% endfor %}
+          </p>
+          <p>{{ data[0].movie.description }}</p>
+          <p>Réalisateur(s) :
+            <strong>
+              {% for director in data[1].directors %}
+                <span>{{ director.firstname }} {{ director.lastname }}</span>
+                {% if not loop.last %} - {% endif %}
+              {% endfor %}
+            </strong>
+          </p>
+          <p>Acteurs :
+            <strong>
+              {% for actor in data[2].actors %}
+                <span>{{ actor.firstname }} {{ actor.lastname }}</span>
+                {% if not loop.last %} - {% endif %}
+              {% endfor %}
+            </strong>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

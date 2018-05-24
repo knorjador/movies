@@ -1,0 +1,6 @@
+
+/assets/data.csv
+/assets/movies.sql
+/vendor
+.htaccess
+composer.lock
