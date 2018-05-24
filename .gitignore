@@ -3,4 +3,4 @@
 composer.lock
 /assets/data.csv
 /assets/movies.sql
-/vendor
+vendor/
