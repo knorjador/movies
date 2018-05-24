@@ -2,20 +2,20 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-
+  
   <div class="grid-container">
     <div class="grid-x grid-padding-x small-up-1 medium-up-2">
 
       <h4 class="ahome"><a href="index.php">Accueil</a></h4>
 
-      <div class="media-object stack-for-small">
+      <div id="detail-film" class="media-object stack-for-small">
         <div class="media-object-section">
           <div class="thumbnail">
-            <img width="300px" src= "{{ data[0].movie.poster }}">
+            <img width="300px" src= "{{ data[0].movie.poster }}" class="picture">
           </div>
         </div>
         <div class="media-object-section">
-          <h4>{{ data[0].movie.title }} <small>{{ data[0].movie.year }}</small></h4>
+          <h4 class="movie-title">{{ data[0].movie.title }} <small class="year">{{ data[0].movie.year }}</small></h4>
           <p>
             {% for genre in data[3].genres %}
               <span>{{ genre.name }}</span>

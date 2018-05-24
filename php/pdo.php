@@ -20,9 +20,9 @@ class Database {
   private function connect() {
 
     $host       = 'localhost';
-    $db         = '**** **** **** ****';
-    $user       = '**** **** **** ****';
-    $password   = '**** **** **** ****';
+    $db         = 'movies';
+    $user       = 'root';
+    $password   = 'root';
 
     try {
 
