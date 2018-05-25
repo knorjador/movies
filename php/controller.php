@@ -3,6 +3,12 @@
 
 require 'model.php';
 
+function ctrlAdd($twig, $pdo) {
+
+  echo $twig->render('admin/add.html');
+
+}
+
 function ctrlMovies($twig, $pdo) {
 
   echo $twig->render('index.html', ['data' => getMovies($pdo)]);
