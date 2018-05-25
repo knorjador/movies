@@ -1,12 +1,12 @@
 {
-    "name": "r4ph/movies",
+    "name": "",
     "authors": [
         {
-            "name": "knorjador",
-            "email": "headers@protonmail.com"
+            "name": "",
+            "email": ""
         }
     ],
     "require": {
-        "twig/twig": "^2.4"
+        "twig/twig": "^2.0"
     }
 }
