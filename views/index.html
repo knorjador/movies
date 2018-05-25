@@ -3,60 +3,21 @@
 
 {% block content %}
 
-<div id="container">
-
-    <section>
-    <div class="grid-x grid-padding-x align-spaced">
-      {% for movie in data %}
-        <div class="cell small-6 medium-4 large-2">
-            <div class="overlay-image"><a href="#">
-                <img class="posterWaterworld" src="{{ movie.poster }}" alt="image poster du film Waterworld" />
-            <div class="text">WATERWORLD</div>
-          </a></div>
-        </div>
-
-        <div class="cell small-6 medium-4 large-2">
-            <div class="overlay-image"><a href="#">
-                <img class="posterDeath" src="{{ movie.poster }}" alt="image poster du film Death Note" />
-            <div class="text">DEATH NOTE</div>
-                </a></div>
-        </div>
-
-        <div class="cell small-6 medium-4 large-2">
-            <div class="overlay-image"><a href="#">
-                <img class="posterDeath" src="{{ movie.poster }}" alt="image poster du film Death Note" />
-            <div class="text">DONNIE DARKO</div>
-                </a></div>
-        </div>
-
-        <div class="cell small-6 medium-4 large-2">
-            <div class="overlay-image"><a href="#">
-                <img class="posterDeath" src="{{ movie.poster }}" alt="image poster du film Death Note" />
-            <div class="text">INTO THE WILD</div>
-                </a></div>
-        </div>
-
-    </div>
-    </section>
-
-    <section>
-        <div class="grid-x grid-padding-x align-spaced">
-            <div class="cell small-6 medium-4 large-2">
-                <div class="overlay-image"><a href="#">
-                    <img class="posterDonnie" src="{{ movie.poster }}" alt="image poster du film Donnie Darko" />
-                <div class="text">DONNIE DARKO</div>
-                    </a></div>
-            </div>
-
-                <div class="cell small-6 medium-4 large-2">
-                    <div class="overlay-image"><a href="#">
-                        <img class="posterInto" src="{{ movie.poster }}" alt="image poster film Into the Wild" />
-                    <div class="text">INTO THE WILD</div>
-                        </a></div>
-                    </div>
-        </div>
-    </section>
+<div class="grid-container">
+  <section>
+<div class="grid-x grid-padding-x align-spaced">
+    <div class="cell small-6 medium-4 large-2">
+{% for movie in data %}
+<div class="overlay-image"><a href="#">
+    <img src="{{ assets('posters/') }}{{ movie.poster }}">
+<div class="text">WATERWORLD</div></a></div><h4><a href="movie/{{ movie.id }}"><strong>{{ movie.title }}</strong></a></h4>
+  </section>
 </div>
-      {% endfor %}
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
 
 {% endblock %}
