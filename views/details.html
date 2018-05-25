@@ -2,27 +2,23 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-  
+
   <div class="grid-container">
     <div class="grid-x grid-padding-x small-up-1 medium-up-2">
-
-      <h4 class="h4"><a href="../movies">Accueil</a></h4>
 
       <div id="detail-film" class="media-object stack-for-small">
         <div class="media-object-section">
           <div class="thumbnail">
-            <img width="300px" src= "{{ data[0].movie.poster }}" class="picture">
+            <img width="300px" src= "{{ assets('posters/') }}{{ data[0].movie.poster }}" class="picture">
           </div>
         </div>
         <div class="media-object-section">
-<<<<<<< HEAD
-          <h4>{{ data[0].movie.title }} <small><a href="year/{{ data[0].movie.year }}">{{ data[0].movie.year }}</a></small></h4>
-=======
-          <h4 class="movie-title">{{ data[0].movie.title }} <small class="year">{{ data[0].movie.year }}</small></h4>
->>>>>>> 9d7acf20b360ccb3c9f6f6838e25a436b6575e81
+
+          <h4 class="movie-title">{{ data[0].movie.title }} <small><a href="{{ BASE }}/year/{{ data[0].movie.year }}">{{ data[0].movie.year }}</a></small></h4>
+
           <p>
             {% for genre in data[3].genres %}
-              <span><a href="genre/{{ genre.id }}">{{ genre.name }}</a></span>
+              <span><a href="{{ BASE }}/genre/{{ genre.id }}">{{ genre.name }}</a></span>
               {% if not loop.last %} & {% endif %}
             {% endfor %}
           </p>
@@ -30,7 +26,7 @@
           <p>Réalisateur(s) :
             <strong>
               {% for director in data[1].directors %}
-                <span><a href="director/{{ director.id }}">{{ director.firstname }} {{ director.lastname }}</span>
+                <span><a href="{{ BASE }}/director/{{ director.id }}">{{ director.firstname }} {{ director.lastname }}</span>
                 {% if not loop.last %} - {% endif %}
               {% endfor %}
             </strong>
@@ -38,7 +34,7 @@
           <p>Acteurs :
             <strong>
               {% for actor in data[2].actors %}
-                <span><a href="actor/{{ actor.id }}">{{ actor.firstname }} {{ actor.lastname }}</a></span>
+                <span><a href="{{ BASE }}/actor/{{ actor.id }}">{{ actor.firstname }} {{ actor.lastname }}</a></span>
                 {% if not loop.last %} - {% endif %}
               {% endfor %}
             </strong>
