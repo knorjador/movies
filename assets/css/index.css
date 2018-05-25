@@ -79,7 +79,7 @@ header {
 
 #detail-film {
   /*  a enlever au responsive*/
-  margin-bottom: 58px; 
+  margin-bottom: 106px; 
 }
 
 footer {
@@ -95,7 +95,7 @@ footer {
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 .container{
-  padding-top: 50px;
+  padding-top: 100px;
 }
 
 .ahome{

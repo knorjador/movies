@@ -9,11 +9,13 @@
       <div id="detail-film" class="media-object stack-for-small">
         <div class="media-object-section">
           <div class="thumbnail">
-            <img width="300px" src= "{{ data[0].movie.poster }}" class="picture">
+            <img width="300px" src= "{{BASE}}{{ data[0].movie.poster }}" class="picture">
           </div>
         </div>
         <div class="media-object-section">
-          <h4 class="movie-title">{{ data[0].movie.title }} <small class="year"><a href="year/{{ data[0].movie.year }}">{{ data[0].movie.year }}</a></small></h4>
+
+          <h4 class="movie-title">{{ data[0].movie.title }} <small><a href="{{ BASE }}/year/{{ data[0].movie.year }}">{{ data[0].movie.year }}</a></small></h4>
+
           <p>
             {% for genre in data[3].genres %}
               <span><a href="genre/{{ genre.id }}">{{ genre.name }}</a></span>
