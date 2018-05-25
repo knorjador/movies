@@ -1,12 +1,12 @@
 {
-    "name": "r4ph/movies",
+    "name": "stagiaire/projet_movies",
     "authors": [
         {
-            "name": "knorjador",
-            "email": "headers@protonmail.com"
+            "name": "Trelanor",
+            "email": "trelanor@gmail.com"
         }
     ],
     "require": {
-        "twig/twig": "^2.4"
+        "twig/twig": "^2.0"
     }
 }
