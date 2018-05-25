@@ -1,11 +1,4 @@
 {
-    "name": "",
-    "authors": [
-        {
-            "name": "",
-            "email": ""
-        }
-    ],
     "require": {
         "twig/twig": "^2.0"
     }
