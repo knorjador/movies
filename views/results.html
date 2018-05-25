@@ -10,13 +10,13 @@
         <div class="media-object">
           <div class="media-object-section">
             <div class="thumbnail">
-              <img width="128px" src= "{{ assets('posters/') }}{{ movie.poster }}">
+              <img width="128px" src= "{{ baseUrl('assets/posters/') }}{{ movie.poster }}">
             </div>
           </div>
           <div class="media-object-section main-section">
             <h4 class="h4">{{ movie.title }}</h4>
             <p>{{ movie.description|slice(0, 200) }}...</p>
-            <a href="{{ BASE }}/movie/{{ movie.id }}" class="button">Voir plus</a>
+            <a href="{{ baseUrl('/movie/') }}{{ movie.id }}" class="button">Voir plus</a>
           </div>
         </div>
       {% endfor %}

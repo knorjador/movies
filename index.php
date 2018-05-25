@@ -5,8 +5,6 @@ require_once './vendor/autoload.php';
 require './php/controller.php';
 require './php/pdo.php';
 
-define('BASE', preg_replace("!^{$_SERVER['DOCUMENT_ROOT']}!", '', __DIR__));
-
 $loader = new Twig_Loader_Filesystem('./views');
 
 $twig = new Twig_Environment($loader, [
@@ -15,11 +13,11 @@ $twig = new Twig_Environment($loader, [
 
 ]);
 
-$twig->addGlobal('BASE', BASE);
+$twig->addFunction(new \Twig_SimpleFunction('baseUrl', function ($url) {
 
-$twig->addFunction(new \Twig_SimpleFunction('assets', function ($assets) {
+  $rootUrl = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME']);
 
-  return sprintf(BASE.'/assets/%s', ltrim($assets, '/'));
+  return $rootUrl.$url;
 
 }));
 
