@@ -1,12 +1,29 @@
 
-{% extends "layouts/base.html" %}
+{% extends "layouts/admin.html" %}
 
 {% block content %}
 
-  <div class="grid-container">
-    <h3 class="h3">Ajouter un film</h3>
-    <div class="grid-x grid-padding-x small-up-1 medium-up-2">
+  <form>
+    <div class="grid-container">
+      <h3 class="h3">Ajouter un film</h3>
+      <div class="grid-x grid-padding-x">
+        <div class="medium-9 cell">
+          <label>Title
+            <input type="text">
+          </label>
+        </div>
+        <div class="medium-4 cell">
+          <label>Firstname
+            <input type="text">
+          </label>
+        </div>
+        <div class="medium-4 cell">
+          <label>Lastname
+            <input type="text">
+          </label>
+        </div>
+      </div>
     </div>
-  </div>
+  </form>
 
 {% endblock %}
