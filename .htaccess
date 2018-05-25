@@ -22,4 +22,6 @@ RewriteRule ^genre/([0-9]+)$ index.php?genre=$1 [L]
 RewriteRule ^director/([0-9]+)$ index.php?director=$1 [L]
 RewriteRule ^actor/([0-9]+)$ index.php?actor=$1 [L]
 
+RewriteRule assets/(.*)$ assets/$1 [L]
+
 #RewriteRule ^(.*+)$ 404.php
