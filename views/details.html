@@ -26,7 +26,7 @@
           <p>Réalisateur(s) :
             <strong>
               {% for director in data[1].directors %}
-                <span><a href="{{ BASE }}/director/{{ director.id }}">{{ director.firstname }} {{ director.lastname }}</span>
+                <span><a href="{{ BASE }}/director/{{ director.id }}">{{ director.firstname }} {{ director.lastname }}</a></span>
                 {% if not loop.last %} - {% endif %}
               {% endfor %}
             </strong>
