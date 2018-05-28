@@ -10,10 +10,6 @@
 
 html {
   min-height: 100vh;
-<<<<<<< HEAD
-=======
-  
->>>>>>> 10369cceff13aaedb668c50b51359e2311f08cdc
 }
 
 body {
@@ -52,7 +48,7 @@ header {
 }
 
 .champ {
-  width: 20%;
+  width: 30%;
   text-align: center;
   height: 39px;
   border-radius: 3px;
@@ -60,11 +56,11 @@ header {
 }
 
 .bouton {
-  width: 8%;
+  width: 15%;
   height: 39px;
-  background: rgb(117, 109, 170);
+  background: linear-gradient(rgb(61, 206, 73), rgb(69, 139, 29));
   opacity: 0.9;
-  color: white;
+  color: rgba(205, 241, 194, 0.945);
   letter-spacing: 1px;
   font-weight: bold;
   font-size: 18px;
@@ -82,7 +78,6 @@ header {
 }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-<<<<<<< HEAD
 /*////////////////////////////////////////// FOOTER ///////////////////////////////////////////////*/
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -110,13 +105,6 @@ section {
 img {
   box-shadow: 1px 1px 12px rgb(0, 0, 0);
   z-index: 5;
-}
-
-img:hover {
-  -webkit-filter: blur(0.5px);
-  filter: blur(0.5px);
-  opacity: .5;
-
 }
 
 /* Conteneur principal du poster */
@@ -162,21 +150,15 @@ img:hover {
 }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-=======
->>>>>>> 10369cceff13aaedb668c50b51359e2311f08cdc
 /*////////////////////////////////////////// DETAIL ///////////////////////////////////////////////*/
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 .container{
-  padding-top: 60px;
+  padding-top: 100px;
 }
 
-a{
-  color: rgb(117, 109, 170);
-}
-
-a:hover{
-  color: rgb(123, 113, 214);
+.ahome{
+  padding: 25px;
 }
 
 .media-object-section{
@@ -227,4 +209,3 @@ a:hover{
 .thumbnail{
   border: none;
 }
-

@@ -14,11 +14,9 @@
         </div>
         <div class="media-object-section">
 
-          <!-- <h4 class="movie-title">{{ data[0].movie.title }} <small><a href="{{ BASE }}/year/{{ data[0].movie.year }}">{{ data[0].movie.year }}</a></small></h4> -->
           <h4 class="movie-title">{{ data[0].movie.title }} <small><a href="{{ baseUrl('/year/') }}{{ data[0].movie.year }}">{{ data[0].movie.year }}</a></small></h4>
           <p>
             {% for genre in data[3].genres %}
-              <!-- <span><a href="{{ BASE }}/genre/{{ genre.id }}">{{ genre.name }}</a></span> -->
               <span><a href="{{ baseUrl('/genre/') }}{{ genre.id }}">{{ genre.name }}</a></span>
               {% if not loop.last %} & {% endif %}
             {% endfor %}
