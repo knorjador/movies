@@ -5,11 +5,12 @@
   <div class="grid-container">
     <div class="grid-x grid-padding-x align-spaced">
       {% for movie in data %}
-        <div class="cell small-6 medium-4 large-2">
+        <div class="cell small-8 medium-6 large-3">
+          <section>
           <div class="overlay-image"><a href="movie/{{ movie.id }}">
-            <img class="posterWaterworld" src="{{ baseUrl('assets/posters/') }}{{ movie.poster }}">
+            <img src="{{ baseUrl('assets/posters/') }}{{ movie.poster }}">
               <div class="text">{{ movie.title }}</div>
-                </a></div>
+                </a></div></section>
             </div>
       {% endfor %}
     </div>

@@ -48,7 +48,7 @@ header {
 }
 
 .champ {
-  width: 30%;
+  width: 20%;
   text-align: center;
   height: 39px;
   border-radius: 3px;
@@ -56,9 +56,9 @@ header {
 }
 
 .bouton {
-  width: 15%;
+  width: 8%;
   height: 39px;
-  background: linear-gradient(rgb(61, 206, 73), rgb(69, 139, 29));
+  background: linear-gradient(rgb(124, 102, 221), rgb(96, 69, 193));
   opacity: 0.9;
   color: rgba(205, 241, 194, 0.945);
   letter-spacing: 1px;
@@ -182,17 +182,43 @@ img {
   margin-bottom: 16px;
 }
 
+a{
+  color: rgb(124, 102, 221);
+  }
+  
+  a:hover{
+  color: rgb(96, 69, 193)
+  }
+
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////////////// MEDIA QUERIES ///////////////////////////////////////////*/
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 635px) {
   
   #detail-film {
     margin-bottom: 0px;
   }
+  .page-title {
+    font-size: 35px;
+  }
+  .champ {
+    width: 150px;
+  }
+  .bouton {
+    width: 50px;
+  }
 }
 
+@media screen and (max-width: 394px) {
+
+  .page-title {
+    font-size: 20px;
+  }
+  .champ {
+    width: 140px;
+  }
+}
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////////////////// ZOOM ////////////////////////////////////////////////*/
