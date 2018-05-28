@@ -9,16 +9,17 @@
       <div id="detail-film" class="media-object stack-for-small">
         <div class="media-object-section">
           <div class="thumbnail">
-            <img width="300px" src= "{{ assets('posters/') }}{{ data[0].movie.poster }}" class="picture">
+            <img width="300px" src= "{{ baseUrl('assets/posters/') }}{{ data[0].movie.poster }}" class="picture">
           </div>
         </div>
         <div class="media-object-section">
 
-          <h4 class="movie-title">{{ data[0].movie.title }} <small><a href="{{ BASE }}/year/{{ data[0].movie.year }}">{{ data[0].movie.year }}</a></small></h4>
-
+          <!-- <h4 class="movie-title">{{ data[0].movie.title }} <small><a href="{{ BASE }}/year/{{ data[0].movie.year }}">{{ data[0].movie.year }}</a></small></h4> -->
+          <h4 class="movie-title">{{ data[0].movie.title }} <small><a href="{{ baseUrl('/year/') }}{{ data[0].movie.year }}">{{ data[0].movie.year }}</a></small></h4>
           <p>
             {% for genre in data[3].genres %}
-              <span><a href="{{ BASE }}/genre/{{ genre.id }}">{{ genre.name }}</a></span>
+              <!-- <span><a href="{{ BASE }}/genre/{{ genre.id }}">{{ genre.name }}</a></span> -->
+              <span><a href="{{ baseUrl('/genre/') }}{{ genre.id }}">{{ genre.name }}</a></span>
               {% if not loop.last %} & {% endif %}
             {% endfor %}
           </p>
@@ -26,7 +27,7 @@
           <p>Réalisateur(s) :
             <strong>
               {% for director in data[1].directors %}
-                <span><a href="{{ BASE }}/director/{{ director.id }}">{{ director.firstname }} {{ director.lastname }}</span>
+                <span><a href="{{ baseUrl('/director/') }}{{ director.id }}">{{ director.firstname }} {{ director.lastname }}</a></span>
                 {% if not loop.last %} - {% endif %}
               {% endfor %}
             </strong>
@@ -34,7 +35,7 @@
           <p>Acteurs :
             <strong>
               {% for actor in data[2].actors %}
-                <span><a href="{{ BASE }}/actor/{{ actor.id }}">{{ actor.firstname }} {{ actor.lastname }}</a></span>
+                <span><a href="{{ baseUrl('/actor/') }}{{ actor.id }}">{{ actor.firstname }} {{ actor.lastname }}</a></span>
                 {% if not loop.last %} - {% endif %}
               {% endfor %}
             </strong>

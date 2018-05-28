@@ -4,7 +4,6 @@ require_once './vendor/autoload.php';
 require './php/controller.php';
 require './php/pdo.php';
 
-
 $loader = new Twig_Loader_Filesystem('./views');
 
 $twig = new Twig_Environment($loader, [
@@ -12,8 +11,11 @@ $twig = new Twig_Environment($loader, [
 ]);
 
 $twig->addFunction(new \Twig_SimpleFunction('baseUrl', function ($url) {
+
   $rootUrl = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME']);
+
   return $rootUrl.$url;
+
 }));
 
 $pdo = new Database();

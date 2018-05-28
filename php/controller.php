@@ -5,7 +5,23 @@ require 'model.php';
 
 function ctrlAdd($twig, $pdo) {
 
-  echo $twig->render('admin/add.html');
+  $method = $_SERVER['REQUEST_METHOD'];
+
+  switch ($method) {
+
+    case 'GET':
+      echo $twig->render('admin/add.html');
+      break;
+
+    case 'POST':
+      echo '<pre>'.var_dump($_POST).'</pre>';
+      break;
+
+    default:
+      echo 'Nope';
+      break;
+
+  }
 
 }
 
