@@ -11,7 +11,7 @@
             <div class="card-divider">
               <h4><a href="movie/{{ movie.id }}"><strong>{{ movie.title }}</strong></a></h4>
             </div>
-            <img src="{{ assets('posters/') }}{{ movie.poster }}">
+            <img src="{{ baseUrl('assets/posters/') }}{{ movie.poster }}">
           </div>
         </div>
       {% endfor %}
