@@ -19,10 +19,12 @@ class Database {
 
   private function connect() {
 
-    $host       = 'localhost';
-    $db         = 'movies';
-    $user       = 'root';
-    $password   = 'stagiaire';
+    require 'config.php';
+
+    $host       = $config['host'];
+    $db         = $config['database'];
+    $user       = $config['user'];
+    $password   = $config['password'];
 
     try {
 

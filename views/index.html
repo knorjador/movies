@@ -1,23 +1,18 @@
-
 {% extends "layouts/base.html" %}
 
 {% block content %}
 
-<div class="grid-container">
-  <section>
-<div class="grid-x grid-padding-x align-spaced">
-    <div class="cell small-6 medium-4 large-2">
-{% for movie in data %}
-<div class="overlay-image"><a href="#">
-    <img src="{{ assets('posters/') }}{{ movie.poster }}">
-<div class="text">WATERWORLD</div></a></div><h4><a href="movie/{{ movie.id }}"><strong>{{ movie.title }}</strong></a></h4>
-  </section>
-</div>
-</div>
-</div>
-</div>
-{% endfor %}
-</div>
-</div>
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x align-spaced">
+      {% for movie in data %}
+        <div class="cell small-6 medium-4 large-2">
+          <div class="overlay-image"><a href="movie/{{ movie.id }}">
+            <img class="posterWaterworld" src="{{ baseUrl('assets/posters/') }}{{ movie.poster }}">
+              <div class="text">{{ movie.title }}</div>
+                </a></div>
+            </div>
+      {% endfor %}
+    </div>
+  </div>
 
 {% endblock %}
